@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae 2.0</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Curriculum Vitae</h1>
+    <nav>
+      <ul>
+        <li onclick="mostrarDescripcion('Info')"><a href="#informacion-personal">Información personal</a></li>
+        <li onclick="mostrarDescripcion('Info2')"><a href="#educacion">Educación</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="informacion-personal">
+      <h2 class="boton" id="Info" onclick="mostrarDescripcion('Info')">Información Personal</h2>
+      <nav id="TodaLaInfo" style="display: none;">
+        <div class="foto" id="fotoperfil">
+            <img src="img/78.jpg" alt="">
+        </div>
+        <p class="infoP">Nombre: <span id="nombre"></span></p>
+        <p class="infoP">Fecha de nacimiento: <span id="fecha-nacimiento"></span></p>
+        <p class="infoP">Dirección: <span id="direccion"></span></p>
+        <p class="infoP">Teléfono: <span id="telefono"></span></p>
+        <p class="infoP">Correo electrónico: <span id="email"></span></p>
+      </nav>
+    </section>
+
+    <section id="educacion">
+      <h2 class="boton" id="Info2" onclick="mostrarDescripcion('Info2')">Educación</h2>
+      <nav id="TodaLaInfo2" style="display: none;">
+        <p class="infoP">Primaria: <span id="primaria"></span></p>
+        <p class="infoP">Secundaria: <span id="secundaria"></span></p>
+        <p class="infoP">Terciarios: <span id="terciarios"></span></p>
+        <p class="infoP">Cursos: <span id="cursos"></span></p>
+      </nav>
+    </section>
+  </main>
+  <script>
+    fetch("json/infodata.json")
+    .then(res => res.json())
+    .then(data => {
+        document.getElementById("nombre").innerHTML = data.nombre;
+        document.getElementById("fecha-nacimiento").innerHTML = data.fechaNacimiento;
+        document.getElementById("direccion").innerHTML = data.direccion;
+        document.getElementById("telefono").innerHTML = data.telefono;
+        document.getElementById("email").innerHTML = data.email;
+        document.getElementById("primaria").innerHTML = data.primaria;
+        document.getElementById("secundaria").innerHTML = data.secundaria;
+        document.getElementById("terciarios").innerHTML = data.terciarios;
+        document.getElementById("cursos").innerHTML = data.cursos;
+    });
+  </script>
+</body>
+</html>

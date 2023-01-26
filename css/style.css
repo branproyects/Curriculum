@@ -1,0 +1,115 @@
+/* Estilos para pantallas pequeñas */
+@media only screen and (max-width: 600px) {
+  /* Estilos específicos para pantallas pequeñas */
+}
+
+/* Estilos para pantallas medianas */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  /* Estilos específicos para pantallas medianas */
+}
+
+/* Estilos para pantallas grandes */
+@media only screen and (min-width: 901px) {
+  /* Estilos específicos para pantallas grandes */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+
+.infoP {
+  font-family: 'PT Serif', serif;
+  font-size: 20px;
+}
+header {
+  background-color: #1e90ff;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+header nav {
+  margin-top: 10px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  margin: 0 10px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+
+main{
+  background-color: white;
+  text-align: center;
+  color: black;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-top:  1px solid black;
+}
+
+
+section nav{
+
+}
+section h2 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 0;
+  
+}
+
+.foto img {
+  width: 150px;
+  border-radius: 50%;
+}
+
+img {
+  border: 0;
+}
+
+.foto .fotoperfi {
+  position: relative;
+  background: #fff;
+  padding: 5px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+  border: 1px solid rgba(0,0,0,.25);
+}
+
+.boton {
+  display: inline-block; /* para que ocupe solo el espacio del contenido */
+  background-color: #4CAF50; /* color de fondo */
+  color: white; /* color del texto */
+  padding: 3px 20px; /* espacios internos */
+  border: 1px solid rgba(0,0,0,.25);
+  border-radius: 10%;
+  cursor: pointer; /* cursor como si fuera un link */
+  text-align: center; /* alineación del texto */
+}
